@@ -103,39 +103,33 @@ function Login(props) {
 
         if (final_auth_type !== "phone") {
           // api call to get token
-          fetch(
-            "https://bookeasy-api.onrender.com/api//api/users/firebase-auth",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: firebase.auth().currentUser.email,
-                display_name: firebase.auth().currentUser.displayName,
-                photo_url: firebase.auth().currentUser.photoURL,
-                auth_type: final_auth_type,
-              }),
-            }
-          )
+          fetch("https://bookeasy-api.onrender.com/api/users/firebase-auth", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: firebase.auth().currentUser.email,
+              display_name: firebase.auth().currentUser.displayName,
+              photo_url: firebase.auth().currentUser.photoURL,
+              auth_type: final_auth_type,
+            }),
+          })
             .then((response) => handleResponse_3(response))
             .then((data) => console.log(data))
             .catch((error) => console.error(error));
         } else {
           // api call to get token
-          fetch(
-            "https://bookeasy-api.onrender.com/api//api/users/firebase-auth",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                phone_number: firebase.auth().currentUser.phoneNumber,
-                auth_type: final_auth_type,
-              }),
-            }
-          )
+          fetch("https://bookeasy-api.onrender.com/users/firebase-auth", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              phone_number: firebase.auth().currentUser.phoneNumber,
+              auth_type: final_auth_type,
+            }),
+          })
             .then((response) => handleResponse_3(response))
             .then((data) => console.log(data))
             .catch((error) => console.error(error));
@@ -296,7 +290,7 @@ function Login(props) {
 
     // do get request with token to get user data
 
-    fetch("https://bookeasy-api.onrender.com/api//api/users/get-profile", {
+    fetch("https://bookeasy-api.onrender.com/api/users/get-profile", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + data.token,
@@ -351,7 +345,7 @@ function Login(props) {
       setEmailError("");
       setpasswordError("");
 
-      fetch("https://bookeasy-api.onrender.com/api//api/users/login/", {
+      fetch("https://bookeasy-api.onrender.com/api/users/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

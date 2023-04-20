@@ -72,7 +72,7 @@ function ForgotPassUpdate() {
     } else {
       console.log("Reset token: " + resetToken);
 
-      fetch("https://bookeasy-api.onrender.com/api//api/users/new-password", {
+      fetch("https://bookeasy-api.onrender.com/api/users/new-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

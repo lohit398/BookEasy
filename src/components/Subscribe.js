@@ -26,7 +26,7 @@ function Subscribe(props) {
     };
 
     fetch(
-      "https://bookeasy-api.onrender.com/api//api/users/subscribe",
+      "https://bookeasy-api.onrender.com/api/users/subscribe",
       requestOptions
     )
       .then((response) => response.text())

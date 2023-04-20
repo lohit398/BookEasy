@@ -80,7 +80,7 @@ function HotelReg(props) {
 
     try {
       const response = await fetch(
-        "https://bookeasy-api.onrender.com/api//api/owners/add-hotel",
+        "https://bookeasy-api.onrender.com/api/owners/add-hotel",
         {
           method: "POST",
           headers: {
