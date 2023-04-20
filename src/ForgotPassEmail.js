@@ -69,7 +69,7 @@ function ForgotPassEmail() {
         setShowMessage(false);
       }, 5000);
 
-      fetch("http://3.144.222.168:3000/api/users/reset-password", {
+      fetch("https://bookeasy-api.onrender.com/api//api/users/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

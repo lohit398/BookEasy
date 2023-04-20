@@ -80,7 +80,7 @@ function HotelReg(props) {
 
     try {
       const response = await fetch(
-        "http://3.144.222.168:3000/api/owners/add-hotel",
+        "https://bookeasy-api.onrender.com/api//api/owners/add-hotel",
         {
           method: "POST",
           headers: {

@@ -48,7 +48,7 @@ export default function Home() {
     };
 
     fetch(
-      "http://3.144.222.168:3000/api/users/search/?city=" +
+      "https://bookeasy-api.onrender.com/api/users/search/?city=" +
         obj.destination +
         "&checkin=" +
         obj.checkIn +
@@ -74,7 +74,10 @@ export default function Home() {
       redirect: "follow",
     };
 
-    fetch("http://3.144.222.168:3000/api/users/hotel/" + id, requestOptions)
+    fetch(
+      "https://bookeasy-api.onrender.com/api/users/hotel/" + id,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         setHotel(result.hotels[0]);

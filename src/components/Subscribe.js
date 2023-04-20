@@ -25,7 +25,10 @@ function Subscribe(props) {
       redirect: "follow",
     };
 
-    fetch("http://3.144.222.168:3000/api/users/subscribe", requestOptions)
+    fetch(
+      "https://bookeasy-api.onrender.com/api//api/users/subscribe",
+      requestOptions
+    )
       .then((response) => response.text())
       .then((result) => {
         toast.success("Successfully Subscribed");

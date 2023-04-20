@@ -59,7 +59,7 @@ function Profileupdate(props) {
 
     try {
       const response = await fetch(
-        "http://3.144.222.168:3000/api/users/update-profile",
+        "https://bookeasy-api.onrender.com/api//api/users/update-profile",
         {
           method: "PUT",
           headers: {
