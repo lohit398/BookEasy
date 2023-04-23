@@ -39,8 +39,8 @@ function InputFramePass(props) {
           width: "32px",
           color: "var(--tropical-blue)",
           position: "relative",
-          left: "10px",
-          top: "0px",
+          left: "640px",
+          top: "-45px",
         }}
         onClick={handleTogglePassword}
       >

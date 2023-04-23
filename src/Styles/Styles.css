@@ -146,12 +146,17 @@
 }
 
 .left_spacing {
-  position: fixed;
+  position: absolute;
   left: 150px;
   top: 108px;
 
-  height: calc(100% - 108px); /* set the height to fill the remaining space */
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: left;
+  width: 100%;
+  max-width: 640px;
+  margin-top: 20px;
 }
 
 .username_input {
@@ -197,7 +202,7 @@
 .forgot_password {
   position: relative;
   margin-top: 50px;
-  margin-left: 250px;
+  margin-left: 230px;
 }
 
 .firebase_auth {
@@ -207,33 +212,22 @@
 }
 
 .explorer_pic {
-  position: fixed;
+  position: absolute;
   top: 60px;
-  left: 900px;
+  left: 700px;
 }
 
-.help {
-  position: fixed;
-  top: 23px;
-  left: 1560px;
-
-  cursor: pointer;
-}
-
-.contact {
-  position: fixed;
-  top: 23px;
-  left: 1684px;
-
-  cursor: pointer;
-}
-
-.home-button {
-  position: fixed;
+.top-right-icons {
+  position: absolute;
   top: 20px;
-  left: 1834px;
+  left: 20px;
+  display: flex;
+  align-items: center;
 }
 
+.top-right-icons .icon {
+  margin-left: 20px;
+}
 /* Sign up */
 
 .already_have {
@@ -265,18 +259,23 @@
 }
 
 .right_spacing {
-  position: fixed;
+  position: absolute;
   right: 150px;
   top: 70px;
 
-  height: calc(100% - 108px); /* set the height to fill the remaining space */
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: left;
+  width: 100%;
+  max-width: 640px;
+  margin-top: 20px;
 }
 
 .explorer_pic_left {
-  position: fixed;
+  position: absolute;
   top: 60px;
-  right: 950px;
+  right: 800px;
 }
 
 .line_r {
@@ -289,28 +288,6 @@
   position: relative;
   margin-top: 20px;
   margin-left: -20px;
-}
-
-.help_r {
-  position: fixed;
-  top: 23px;
-  right: 316px;
-
-  cursor: pointer;
-}
-
-.contact_r {
-  position: fixed;
-  top: 23px;
-  right: 139px;
-
-  cursor: pointer;
-}
-
-.home-button_r {
-  position: fixed;
-  top: 20px;
-  right: 54px;
 }
 
 /* Temp Home */
@@ -326,12 +303,6 @@
 }
 
 /* forgot email */
-
-.home-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
 
 .title_text_header {
   position: relative;
@@ -353,10 +324,10 @@
 
 /* forgot email update */
 
-.home-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+.explorer_pic_passup {
+  position: absolute;
+  top: 0px;
+  left: 850px;
 }
 
 .text_header {

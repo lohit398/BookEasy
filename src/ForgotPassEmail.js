@@ -87,14 +87,16 @@ function ForgotPassEmail() {
   const prompt_2 = "and we'll email you a link to reset your password.";
   return (
     <div>
-      <div className="help">
-        <span className="nunito-semi-bold-green-20px">Help</span>
-      </div>
-      <div className="contact">
-        <span className="nunito-semi-bold-green-20px">Contact us</span>
-      </div>
-      <div className="home-button">
-        <HomeButton />
+      <div className="top-right-icons">
+        <div className="icon home-button1">
+          <HomeButton />
+        </div>
+        <div className="icon contact">
+          <span className="nunito-semi-bold-green-20px">Contact us</span>
+        </div>
+        <div className="icon help">
+          <span className="nunito-semi-bold-green-20px">Help</span>
+        </div>
       </div>
 
       <div className="explorer_pic">
