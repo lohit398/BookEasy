@@ -14,6 +14,8 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
+import { PopupMenu } from "react-simple-widgets";
+
 function navbar(props) {
   const navigate = useNavigate();
   const {
@@ -74,6 +76,28 @@ function navbar(props) {
       </div>
       {logged_in_email_val ? (
         <div class="sub-nav-container">
+          <PopupMenu>
+            <button className="nav-text-button nav-link nav-item">
+              User Info
+            </button>
+
+            <div className="card text-start">
+              <div className="card-body px-4 py-4">
+                <div>
+                  {logged_in_photo_val && (
+                    <img
+                      src={logged_in_photo_val}
+                      alt="Example image"
+                      className="nav-img"
+                    />
+                  )}
+                </div>
+                <h5 className="text-center mb-0">{logged_in_name_val}</h5>
+                <p className="text-center mb-2">{logged_in_email_val}</p>
+                <p className="text-center mb-2">Phone: {logged_in_phone_val}</p>
+              </div>
+            </div>
+          </PopupMenu>
           <span
             class="nav-link nav-item login-btn nav-logout"
             onClick={handleLogoutClick}
