@@ -120,14 +120,7 @@ function Profileupdate(props) {
   return (
     <div>
       <Toaster />
-      <div
-        style={{
-          height: "500px",
-          marginTop: "50px",
-          overflow: "auto",
-          marginBottom: "100px",
-        }}
-      >
+      <div className="profile_up_container">
         <form onSubmit={handleUpdate} className="profile_up_form">
           <span className="poppins-extra-bold-green-36px">Profile Update</span>
           <label htmlFor="first_name" className="hotel_reg_label">

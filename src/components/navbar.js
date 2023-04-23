@@ -62,7 +62,7 @@ function navbar(props) {
   return (
     <nav class="navbar fixed-top navbar-light navbar-container nav-bar-container">
       <div class="sub-nav-container nav-padding-left">
-        <a class="nav-link nav-active nav-item" href="#">
+        <a class="nav-link nav-active nav-item" href="/">
           Home
         </a>
         <a class="nav-link nav-item" href="/hotelreg">
