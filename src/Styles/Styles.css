@@ -408,6 +408,13 @@
 
 /* profile_up */
 
+.profile_up_container {
+  height: "100%";
+  margin-top: "50px";
+  overflow: "auto";
+  margin-bottom: "100px";
+}
+
 .profile_up_form {
   display: flex;
   flex-direction: column;
@@ -1033,6 +1040,10 @@
 
 .margin-top-50 {
   margin-top: 50px;
+}
+
+.margin-top-150 {
+  margin-top: 150px;
 }
 
 .flex-center {
