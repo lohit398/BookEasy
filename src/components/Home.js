@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import HotelInformation from "./HotelInformation";
 import React, { useState, useEffect } from "react";
 import Payment from "./Payment";
+
+import KommunicateChat from "./Chat";
 // import Dashboard from "./components/Dashboard";
 
 export default function Home() {
@@ -107,6 +109,7 @@ export default function Home() {
       setInitial(false);
     }
   });
+
   if (hotelId == -1 && !dispPayment) {
     return (
       <div>
@@ -138,6 +141,7 @@ export default function Home() {
             })}
           </div>
         </div>
+        <KommunicateChat></KommunicateChat>
         <Footer />
       </div>
     );
