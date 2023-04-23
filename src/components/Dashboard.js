@@ -5,7 +5,23 @@ import { UserData } from "../utils/Data";
 import MenuBar from "./MenuBar";
 import Footer from "./Footer";
 
-function Dashboard() {
+function Dashboard(props) {
+  const {
+    logged_in_email_val,
+    setlogged_in_email_func,
+    logged_in_firebase_val,
+    setlogged_in_firebase_func,
+    logged_in_name_val,
+    setlogged_in_name_func,
+    logged_in_photo_val,
+    setlogged_in_photo_func,
+    logged_in_auth_type_val,
+    setlogged_in_auth_type_func,
+    logged_in_token_val,
+    setlogged_in_token_func,
+    logged_in_phone_val,
+    setlogged_in_phone_func,
+  } = props;
   //console.log(UserData);
   const [userData, setUserData] = useState({
     labels: UserData.map((data) => data.year),
