@@ -327,26 +327,27 @@ function Signup(props) {
 
   return (
     <div>
-      <div className="help_r">
-        <span className="nunito-semi-bold-green-20px">Help</span>
-      </div>
-      <div className="contact_r">
-        <span className="nunito-semi-bold-green-20px">Contact us</span>
-      </div>
-      <div className="home-button_r">
-        <HomeButton />
-      </div>
-
-      <div className="explorer_pic_left">
-        <img
-          src="https://i.ibb.co/RcHmMmp/explorer.png"
-          width="960"
-          height="848"
-          alt=""
-        />
+      <div className="top-right-icons">
+        <div className="icon home-button1">
+          <HomeButton />
+        </div>
+        <div className="icon contact">
+          <span className="nunito-semi-bold-green-20px">Contact us</span>
+        </div>
+        <div className="icon help">
+          <span className="nunito-semi-bold-green-20px">Help</span>
+        </div>
       </div>
 
-      <div className="right_spacing">
+      <div className="left_spacing">
+        <div className="explorer_pic">
+          <img
+            src="https://i.ibb.co/RcHmMmp/explorer.png"
+            width="960"
+            height="848"
+            alt=""
+          />
+        </div>
         <div className="already_have">
           <span className="already_have_text opensans-normal-biscay-24px">
             {"Already have an account? "}

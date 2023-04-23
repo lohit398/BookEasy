@@ -89,17 +89,19 @@ function ForgotPassUpdate() {
 
   return (
     <div>
-      <div className="help_r">
-        <span className="nunito-semi-bold-green-20px">Help</span>
-      </div>
-      <div className="contact_r">
-        <span className="nunito-semi-bold-green-20px">Contact us</span>
-      </div>
-      <div className="home-button_r">
-        <HomeButton />
+      <div className="top-right-icons">
+        <div className="icon home-button1">
+          <HomeButton />
+        </div>
+        <div className="icon contact">
+          <span className="nunito-semi-bold-green-20px">Contact us</span>
+        </div>
+        <div className="icon help">
+          <span className="nunito-semi-bold-green-20px">Help</span>
+        </div>
       </div>
 
-      <div className="explorer_pic_left">
+      <div className="explorer_pic_passup">
         <img
           src={require("./resources/explorer.png")}
           width="960"
@@ -107,7 +109,7 @@ function ForgotPassUpdate() {
           alt=""
         />
       </div>
-      <div className="right_spacing">
+      <div className="left_spacing">
         <div className="title_text_header">
           <span className="nunito-bold-biscay-28px">Update password</span>
         </div>
