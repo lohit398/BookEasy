@@ -167,6 +167,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home {...homePageData} />} />
+          <Route path="/cancel_url" element={<Home {...homePageData} />} />
           <Route path="/login" element={<Login {...loginPageData} />} />
           <Route path="/signup" element={<Signup {...siginupPageData} />} />
           <Route path="/reset-password-email" element={<ForgotPassEmail />} />
