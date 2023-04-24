@@ -185,7 +185,28 @@ export default function Home(props) {
     return (
       <div>
         <Navbar {...props} />
-        <Payment hotel={hotel} searchParams={searchParams} />
+        <Payment
+          hotel={hotel}
+          searchParams={searchParams}
+          user={{
+            logged_in_email_val,
+            setlogged_in_email_func,
+            logged_in_firebase_val,
+            setlogged_in_firebase_func,
+            logged_in_name_val,
+            setlogged_in_name_func,
+            logged_in_photo_val,
+            setlogged_in_photo_func,
+            logged_in_auth_type_val,
+            setlogged_in_auth_type_func,
+            logged_in_token_val,
+            setlogged_in_token_func,
+            logged_in_phone_val,
+            setlogged_in_phone_func,
+            isAdmin_val,
+            setIsAdmin_func,
+          }}
+        />
         <Footer />
       </div>
     );
