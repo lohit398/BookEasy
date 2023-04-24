@@ -132,7 +132,7 @@ export default function Home(props) {
   if (hotelId == -1 && !dispPayment) {
     return (
       <div>
-        <Navbar {...props} />
+        <Navbar {...props} active="1" />
         <Banner />
         <div className="container">
           <Search
@@ -167,7 +167,7 @@ export default function Home(props) {
   } else if (hotel != -1 && !dispPayment) {
     return (
       <div>
-        <Navbar {...props} />
+        <Navbar {...props} active="1" />
         <HotelInformation
           hotel={hotel}
           rooms={searchParams.rooms}
@@ -178,13 +178,14 @@ export default function Home(props) {
           onReturn={handleReturn}
           onMoveToPayment={moveToPayment}
         />
+        <KommunicateChat></KommunicateChat>
         <Footer />
       </div>
     );
   } else if (dispPayment) {
     return (
       <div>
-        <Navbar {...props} />
+        <Navbar {...props} active="1" />
         <Payment
           hotel={hotel}
           searchParams={searchParams}
@@ -207,6 +208,7 @@ export default function Home(props) {
             setIsAdmin_func,
           }}
         />
+        <KommunicateChat></KommunicateChat>
         <Footer />
       </div>
     );

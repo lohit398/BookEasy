@@ -75,7 +75,7 @@ function Dashboard(props) {
 
   return (
     <div>
-      <Navbar {...props} />
+      <Navbar {...props} active="3" />
       <div
         class="padding-left-10 padding-right-10 margin-top-50 "
         style={{ marginBottom: "770px" }}

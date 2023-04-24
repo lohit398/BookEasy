@@ -61,16 +61,27 @@ function navbar(props) {
     navigate("/");
   }
 
+  const [activeTab, setActiveTab] = useState(parseInt(props.active));
+
   return (
     <nav class="navbar fixed-top navbar-light navbar-container nav-bar-container">
       <div class="sub-nav-container nav-padding-left">
-        <a class="nav-link nav-active nav-item" href="/">
+        <a
+          class={"nav-link nav-item" + (activeTab == 1 ? " nav-active" : "")}
+          href="/"
+        >
           Home
         </a>
-        <a class="nav-link nav-item" href="/hotelreg">
+        <a
+          class={"nav-link nav-item" + (activeTab == 2 ? " nav-active" : "")}
+          href="/hotelreg"
+        >
           Hotel Registration
         </a>
-        <a class="nav-link nav-item" href="/dashboard">
+        <a
+          class={"nav-link nav-item" + (activeTab == 3 ? " nav-active" : "")}
+          href="/dashboard"
+        >
           Dashboards
         </a>
       </div>

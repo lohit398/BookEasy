@@ -181,7 +181,7 @@ function HotelReg(props) {
 
   return (
     <div>
-      <Navbar {...props} />
+      <Navbar {...props} active="2" />
       <Toaster />
 
       <div
