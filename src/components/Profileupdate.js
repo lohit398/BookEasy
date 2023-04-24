@@ -30,6 +30,8 @@ function Profileupdate(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
 
   const [input_error, setinput_error] = useState("");

@@ -36,6 +36,8 @@ function HotelReg(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
 
   const [url_1, updateUrl_1] = useState("1");

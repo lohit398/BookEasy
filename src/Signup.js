@@ -40,6 +40,8 @@ function Signup(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
 
   var final_auth_type = "";
@@ -102,6 +104,7 @@ function Signup(props) {
               email: firebase.auth().currentUser.email,
               display_name: firebase.auth().currentUser.displayName,
               photo_url: firebase.auth().currentUser.photoURL,
+              admin: "no",
               auth_type: final_auth_type,
             }),
           })
@@ -117,6 +120,7 @@ function Signup(props) {
             },
             body: JSON.stringify({
               phone_number: firebase.auth().currentUser.phoneNumber,
+              admin: "no",
               auth_type: final_auth_type,
             }),
           })
@@ -145,6 +149,8 @@ function Signup(props) {
   const [first_name_val, setfirst_name] = useState("");
   const [last_name_val, setlast_name] = useState("");
   const [password_val, setpassword] = useState("");
+
+  const [admin_val, setadmin] = useState("no");
 
   const [input_error, setinput_error] = useState("");
 
@@ -317,6 +323,7 @@ function Signup(props) {
           first_name: first_name_val,
           last_name: last_name_val,
           password: password_val,
+          admin: admin_val,
           auth_type: "email",
         }),
       })
@@ -409,6 +416,24 @@ function Signup(props) {
               placeholder="Enter your password"
               parent_function={setpassword}
             />
+          </div>
+
+          <div className="text_header_r">
+            <div>
+              <span className="nunito-semi-bold-biscay-28px">Admin</span>
+            </div>
+
+            <div>
+              <input
+                className="admin_checkbox"
+                type="checkbox"
+                checked={admin_val === "yes"}
+                onChange={(e) => setadmin(e.target.checked ? "yes" : "no")}
+              />
+              <label className="admin_label opensans-normal-biscay-24px">
+                {admin_val}
+              </label>
+            </div>
           </div>
         </div>
 

@@ -55,6 +55,10 @@ function App() {
     sessionStorage.getItem("loggedInPhone") || ""
   );
 
+  const [isAdmin, setIsAdmin] = useState(
+    sessionStorage.getItem("isAdmin") || "no"
+  );
+
   useEffect(() => {
     sessionStorage.setItem("loggedInPhone", logges_in_phone);
   }, [logges_in_phone]);
@@ -83,6 +87,10 @@ function App() {
     sessionStorage.setItem("loggedInFirebase", logged_in_firebase);
   }, [logged_in_firebase]);
 
+  useEffect(() => {
+    sessionStorage.setItem("isAdmin", isAdmin);
+  }, [isAdmin]);
+
   firebase.initializeApp({
     apiKey: "AIzaSyCt0PHGmSISchE63fvSWEFosGNHmOo5hz8",
     authDomain: "bookeasy-firebase-auth.firebaseapp.com",
@@ -108,6 +116,8 @@ function App() {
     setlogged_in_token_func: setlogged_in_token,
     logged_in_phone_val: logges_in_phone,
     setlogged_in_phone_func: setlogged_in_phone,
+    isAdmin_val: isAdmin,
+    setIsAdmin_func: setIsAdmin,
   };
 
   const loginPageData = {
@@ -129,6 +139,8 @@ function App() {
     setlogged_in_token_func: setlogged_in_token,
     logged_in_phone_val: logges_in_phone,
     setlogged_in_phone_func: setlogged_in_phone,
+    isAdmin_val: isAdmin,
+    setIsAdmin_func: setIsAdmin,
   };
 
   const siginupPageData = {
@@ -146,6 +158,8 @@ function App() {
     setlogged_in_token_func: setlogged_in_token,
     logged_in_phone_val: logges_in_phone,
     setlogged_in_phone_func: setlogged_in_phone,
+    isAdmin_val: isAdmin,
+    setIsAdmin_func: setIsAdmin,
   };
 
   return (

@@ -50,6 +50,8 @@ function Login(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
 
   var final_auth_type = "";
@@ -112,6 +114,7 @@ function Login(props) {
               email: firebase.auth().currentUser.email,
               display_name: firebase.auth().currentUser.displayName,
               photo_url: firebase.auth().currentUser.photoURL,
+              admin: "no",
               auth_type: final_auth_type,
             }),
           })
@@ -120,13 +123,14 @@ function Login(props) {
             .catch((error) => console.error(error));
         } else {
           // api call to get token
-          fetch("https://bookeasy-api.onrender.com/users/firebase-auth", {
+          fetch("https://bookeasy-api.onrender.com/api/users/firebase-auth", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
               phone_number: firebase.auth().currentUser.phoneNumber,
+              admin: "no",
               auth_type: final_auth_type,
             }),
           })
@@ -180,6 +184,8 @@ function Login(props) {
     //set token
 
     setlogged_in_token_func(data.token);
+
+    setIsAdmin_func("no");
 
     try {
       if (final_auth_type !== "phone") {
@@ -262,6 +268,9 @@ function Login(props) {
     console.log("Success:", data);
 
     setlogged_in_token_func(data.token);
+
+    // set isAdmin to true if admin=== "yes"
+    setIsAdmin_func(data.admin);
 
     try {
       setlogged_in_email_func(email_val);
