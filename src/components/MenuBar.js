@@ -23,7 +23,11 @@ export default function MenuBar(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
+
+  console.log(" MenuBar.js: isAdmin_val: ", isAdmin_val);
 
   const handleClickProfile = () => {
     setMenuSelection("Profile");
@@ -54,10 +58,10 @@ export default function MenuBar(props) {
             </div>
           )}
         </div>
-
         <div>{logged_in_name_val}</div>
         <div>{logged_in_email_val}</div>
         <div>{logged_in_phone_val}</div>
+        {isAdmin_val === "yes" ? <div>Admin</div> : <div>Customer</div>}
       </div>
 
       <div class="options">

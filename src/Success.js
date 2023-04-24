@@ -33,6 +33,8 @@ function Success(props) {
     setlogged_in_token_func,
     logged_in_phone_val,
     setlogged_in_phone_func,
+    isAdmin_val,
+    setIsAdmin_func,
   } = props;
 
   function handleClick_Home() {
