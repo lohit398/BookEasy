@@ -9,6 +9,8 @@ import {
 
 import "./Styles/Styles.css";
 
+import toast, { Toaster } from "react-hot-toast";
+
 //Component imports
 import InputFrame from "./components/InputFrame";
 import Button from "./components/Button";
@@ -224,12 +226,12 @@ function Login(props) {
 
     try {
       if (final_auth_type !== "phone") {
-        setlogged_in_phone_func("Guest Phone Number");
+        setlogged_in_phone_func("");
       } else {
         setlogged_in_phone_func(firebase.auth().currentUser.phoneNumber);
       }
     } catch (e) {
-      setlogged_in_phone_func("Guest Phone Number");
+      setlogged_in_phone_func("");
       console.log("Error");
     }
 
@@ -262,6 +264,7 @@ function Login(props) {
 
   function handleFailure_3(error) {
     console.error("Error:", error);
+    toast.error("Error:", error);
   }
 
   function handleSuccess(data) {
@@ -324,6 +327,7 @@ function Login(props) {
 
   function handleFailure(error) {
     console.error("Error:", error);
+    toast.error("Error:", error);
   }
 
   function handleClick_Logout() {
@@ -373,6 +377,7 @@ function Login(props) {
 
   return (
     <div>
+      <Toaster />
       <div className="top-right-icons">
         <div className="icon home-button1">
           <HomeButton />
@@ -461,9 +466,6 @@ function Login(props) {
                 </div>
               </div>
             )}
-          </div>
-          <div className="button_login">
-            <Button clickHandler={handleClick_Logout} text="Logout" />
           </div>
         </div>
       </div>

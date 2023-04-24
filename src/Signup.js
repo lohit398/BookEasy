@@ -420,7 +420,7 @@ function Signup(props) {
 
           <div className="text_header_r">
             <div>
-              <span className="nunito-semi-bold-biscay-28px">Admin</span>
+              <span className="nunito-semi-bold-biscay-28px">Hotel Owner</span>
             </div>
 
             <div>

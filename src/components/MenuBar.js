@@ -61,7 +61,7 @@ export default function MenuBar(props) {
         <div>{logged_in_name_val}</div>
         <div>{logged_in_email_val}</div>
         <div>{logged_in_phone_val}</div>
-        {isAdmin_val === "yes" ? <div>Admin</div> : <div>Customer</div>}
+        {isAdmin_val === "yes" ? <div>Hotel Owner</div> : <div>Customer</div>}
       </div>
 
       <div class="options">
