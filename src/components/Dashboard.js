@@ -5,6 +5,7 @@ import { UserData } from "../utils/Data";
 import MenuBar from "./MenuBar";
 import Footer from "./Footer";
 import PastBooking from "./PastBooking";
+import CurrentBooking from "./CurrentBooking";
 
 import Navbar from "./navbar";
 
@@ -111,11 +112,16 @@ function Dashboard(props) {
 
           {menuSelection === "Profile" && <Profileupdate {...props} />}
 
-          {menuSelection === "CurrentBooking" && <div></div>}
+          {menuSelection === "CurrentBooking" && <CurrentBooking />}
           {menuSelection === "History" && <PastBooking />}
         </div>
 
         {menuSelection === "History" && (
+          <div class="margin-bottom-150">
+            <br />
+          </div>
+        )}
+        {menuSelection === "CurrentBooking" && (
           <div class="margin-bottom-150">
             <br />
           </div>

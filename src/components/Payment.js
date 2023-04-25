@@ -70,7 +70,7 @@ export default function Payment(props) {
             billing_address: formData.address,
             billing_city: formData.city,
             billing_state: formData.state,
-            billing_zipcode: formData.zipCode,
+            billing_zip_code: formData.zipCode,
           }),
         }
       );
