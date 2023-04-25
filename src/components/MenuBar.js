@@ -1,4 +1,5 @@
 import "../Styles/Styles.css";
+import "bootstrap/dist/css/bootstrap.css";
 import { MdDashboard } from "react-icons/md";
 import { HiUserCircle } from "react-icons/hi";
 import { ImProfile } from "react-icons/im";
@@ -41,8 +42,12 @@ export default function MenuBar(props) {
     setMenuSelection("CurrentBooking");
   };
 
+  const handleHistoryClick = () => {
+    setMenuSelection("History");
+  };
+
   return (
-    <div class="poppins">
+    <div class="poppins" style={{ width: "10%" }}>
       <div class="user-details">
         <div>
           {logged_in_photo_val ? (
@@ -59,7 +64,9 @@ export default function MenuBar(props) {
           )}
         </div>
         <div>{logged_in_name_val}</div>
-        <div>{logged_in_email_val}</div>
+        <div class="text-truncate" style={{ width: "100%" }}>
+          {logged_in_email_val}
+        </div>
         <div>{logged_in_phone_val}</div>
         {isAdmin_val === "yes" ? <div>Hotel Owner</div> : <div>Customer</div>}
       </div>
@@ -97,7 +104,13 @@ export default function MenuBar(props) {
         </div>
         <div class="opts">
           <MdWorkHistory size="20" />
-          <div class="margin-left-3">Booking History</div>
+          <div
+            class="margin-left-3"
+            onClick={handleHistoryClick}
+            style={{ cursor: "pointer" }}
+          >
+            Booking History
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import BarChart from "./BarChart";
 import { UserData } from "../utils/Data";
 import MenuBar from "./MenuBar";
 import Footer from "./Footer";
+import PastBooking from "./PastBooking";
 
 import Navbar from "./navbar";
 
@@ -30,6 +31,7 @@ function Dashboard(props) {
   } = props;
 
   //state to hold menu selection
+
   const [menuSelection, setMenuSelection] = useState("Dashboard");
 
   // props to send to menu bar
@@ -110,9 +112,16 @@ function Dashboard(props) {
           {menuSelection === "Profile" && <Profileupdate {...props} />}
 
           {menuSelection === "CurrentBooking" && <div></div>}
+          {menuSelection === "History" && <PastBooking />}
         </div>
 
-        <div class="margin-top-350 ">
+        {menuSelection === "History" && (
+          <div class="margin-bottom-150">
+            <br />
+          </div>
+        )}
+
+        <div class="margin-top-350">
           <br />
         </div>
       </div>

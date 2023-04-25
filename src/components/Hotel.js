@@ -1,11 +1,25 @@
-import "./styles.css";
+import "../Styles/Styles.css";
+import "bootstrap/dist/css/bootstrap.css";
 
-export default function Hotel() {
+export default function Hotel(props) {
   return (
-    <div>
-      <div class="hotel-container justify-content-end poppins">
-        <div>Graduate Bloomington</div>
-        <div>22-10-2023</div>
+    <div class="mb-2">
+      <div class="hotel-container justify-content-space-between poppins">
+        <div>{props.hotelName}</div>
+        <div class="flexbox">
+          <span
+            class="badge badge-pill badge-secondary"
+            style={{ background: "black", marginRight: 5 }}
+          >
+            {props.checkIn}
+          </span>
+          <span
+            class="badge badge-pill badge-secondary"
+            style={{ background: "black" }}
+          >
+            {props.checkOut}
+          </span>
+        </div>
       </div>
     </div>
   );
