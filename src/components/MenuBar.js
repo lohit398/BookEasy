@@ -1,3 +1,5 @@
+//https://bookeasy.netlify.app/dashboard
+
 import "../Styles/Styles.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { MdDashboard } from "react-icons/md";
@@ -72,7 +74,9 @@ export default function MenuBar(props) {
       </div>
 
       <div class="options">
-        <div class="opts ">
+        <div
+          class={"opts " + (menuSelection == "Dashboard" ? " active-opt" : "")}
+        >
           <MdDashboard size="20" />
           <div
             class="margin-left-3"
@@ -82,7 +86,9 @@ export default function MenuBar(props) {
             Dashboard
           </div>
         </div>
-        <div class="opts">
+        <div
+          class={"opts " + (menuSelection == "Profile" ? " active-opt" : "")}
+        >
           <ImProfile size="20" />
           <div
             class="margin-left-3"
@@ -92,7 +98,11 @@ export default function MenuBar(props) {
             View Profile
           </div>
         </div>
-        <div class="opts">
+        <div
+          class={
+            "opts " + (menuSelection == "CurrentBooking" ? " active-opt" : "")
+          }
+        >
           <BsFillBagFill size="20" />
           <div
             class="margin-left-3"
@@ -102,7 +112,9 @@ export default function MenuBar(props) {
             Current Bookings
           </div>
         </div>
-        <div class="opts">
+        <div
+          class={"opts " + (menuSelection == "History" ? " active-opt" : "")}
+        >
           <MdWorkHistory size="20" />
           <div
             class="margin-left-3"
